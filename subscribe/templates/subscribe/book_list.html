@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Subscriber List</h1>
+
+    {% if subscriber_list %}
+    <ul>
+
+      {% for subscriber in subscriber_list %}
+      <li>
+        <a href="{{ subscriber.get_absolute_url }}">{{ subscriber.name }}</a> ({{subscriber.email}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no subscriber for the event.</p>
+    {% endif %}       
+{% endblock %}

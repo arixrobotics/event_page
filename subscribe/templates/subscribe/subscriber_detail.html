@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p><br />Subscriber added!<br /><p>
+  <h1>Name: {{ subscriber.name }}</h1>
+  <p><strong>Email:</strong> {{ subscriber.email }}</p>
+  <p><br />Return to <a href="{% url 'index' %}">Home</a></p>
+  
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block title %}
+<title> My Event </title>
+{% endblock %}
+
+{% block content %}
+<h1>Event Home</h1>
+
+  <p>Welcome to <em>My Event</em>!</p>
+  <p>We have {{ num_subscriber }} subscribers to date.</p>
+  <p>
+  Click <a href="{% url 'subscriber_create' %}">here</a> to subscribe. 
+  
+  <p>
+{% endblock %}
